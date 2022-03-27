@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathe</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="changeT()">
+    <div class="circle" id="circle">
+          <div class="breathe-title">
+              <p id="label">breathe in</p>
+          </div>
+      </div>
+  </body>
+</html>
+
+
+<script type="text/javascript">
+var t_interval = null;
+function changeT() {
+  clearInterval(t_interval);
+  document.getElementById('label').innerHTML = "breathe in";
+  t_interval = setInterval(hold, 4000);
+}
+
+function hold(){
+  clearInterval(t_interval);
+  document.getElementById('label').innerHTML = "hold";
+  t_interval = setInterval(out, 7000);
+}
+
+//this function changes the text to breathe out
+function out() {
+  clearInterval(t_interval);
+  document.getElementById('label').innerHTML = "breathe out";
+  t_interval = setInterval(changeT, 8000);
+}
+</script>

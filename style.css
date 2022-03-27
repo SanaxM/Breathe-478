@@ -1,0 +1,52 @@
+/* the star selector applies the actions to all the elements on the page*/
+*{
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.breathe-title{
+  font-family: Arial;
+  font-family: sans-serif;
+  font-size: 23pt;
+}
+
+
+.circle{
+  background-color: #CDE4EB;
+  display: grid;
+  place-items: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 60%;
+  /* Animate the circle */
+  animation: breathe 19s infinite;
+}
+
+@keyframes breathe {
+  0%{
+    transform: scale(0.5);
+    box-shadow: 0 0 0 0 rgb(211, 219, 222);
+  }
+  21%{
+    transform: scale(1.0);
+    box-shadow: 0 0 10px 0 rgb(211, 219, 222);
+  }
+  58%
+  {
+    transform: scale(1.0);
+    box-shadow: 0 0 10px 0 rgb(211, 219, 222);
+    background-color: #F1E1E5;
+  }
+  100%{
+    transform: scale(0.5);
+    box-shadow: 0 0 0 0 rgb(241, 225, 229);
+    background-color: #F1E1E5;
+  }
+}
